@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yohan Deshpande — Selected work</title>
+  <meta name="description" content="Yohan Deshpande. LLM calibration research (1st, paper; 14th overall), a 30th-place Kaggle document pipeline, and a live New Jersey high school ratings site." />
+  <link rel="canonical" href="https://yoyoyohan.github.io/Data-Science-Portfolio/" />
+  <meta property="og:title" content="Yohan Deshpande — Selected work" />
+  <meta property="og:description" content="1st in the research paper. 14th overall. A Kaggle document pipeline at 30th, and a live New Jersey high school ratings site." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yoyoyohan.github.io/Data-Science-Portfolio/" />
+  <meta property="og:image" content="https://yoyoyohan.github.io/Data-Science-Portfolio/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yohan Deshpande — Selected work" />
+  <meta name="twitter:description" content="1st in the research paper. 14th overall. A Kaggle document pipeline at 30th, and a live New Jersey high school ratings site." />
+  <meta name="twitter:image" content="https://yoyoyohan.github.io/Data-Science-Portfolio/og.png" />
+  <meta name="theme-color" content="#f3efe6" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,560&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f3efe6;
+      --ink: #1c1915;
+      --muted: #5c564e;
+      --faint: #8a8378;
+      --line: #d5cec2;
+      --accent: #9d3416;
+      --live: #1c6b45;
+      --card: #faf7f1;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      overflow-x: clip;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header.mast {
+      padding: 28px 0 0;
+      border-bottom: 1px solid var(--ink);
+    }
+    .mast-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .mast-top a { text-decoration: none; border-bottom: 1px solid var(--line); }
+    .mast-top a:hover { border-bottom-color: var(--ink); color: var(--ink); }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 560;
+      font-size: clamp(3.1rem, 8vw, 6.4rem);
+      line-height: 0.9;
+      letter-spacing: -0.035em;
+      margin: 22px 0 18px;
+    }
+    h1 span { white-space: nowrap; }
+    .rule {
+      height: 4px;
+      background: var(--ink);
+      margin-top: 8px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      padding: 32px 0 8px;
+    }
+    .lede {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .intro p.note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      max-width: 42rem;
+    }
+    .proof {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 18px;
+      margin: 0;
+      align-content: start;
+    }
+    .proof div { border-top: 1px solid var(--line); padding-top: 8px; }
+    .proof strong {
+      display: block;
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 620;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .proof span {
+      display: block;
+      margin-top: 4px;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav.jump {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      margin-top: 28px;
+    }
+    nav.jump { overflow-x: auto; }
+    nav.jump ul {
+      list-style: none;
+      display: flex;
+      gap: 8px 18px;
+      width: max-content;
+      min-width: 100%;
+      margin: 0;
+      padding: 12px 0;
+    }
+    nav.jump a {
+      text-decoration: none;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    nav.jump a:hover { color: var(--ink); }
+
+    main { padding-bottom: 72px; }
+
+    article {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 8px 28px;
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 56px;
+    }
+    .idx {
+      font-family: "Fraunces", Georgia, serif;
+      font-style: italic;
+      font-weight: 560;
+      font-size: 1.35rem;
+      color: var(--accent);
+      padding-top: 6px;
+    }
+    .kicker {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 8px;
+    }
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 560;
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin: 0 0 8px;
+    }
+    .claim {
+      margin: 0 0 14px;
+      font-size: 1.08rem;
+    }
+    .body { margin: 0; color: var(--ink); max-width: 44rem; }
+    .body + .body { margin-top: 12px; }
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+    }
+    .facts li {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 6px 9px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .links a {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+    }
+    .links a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .links a.live { color: var(--live); border-bottom-color: var(--live); }
+
+    footer {
+      padding: 28px 0 48px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    footer a { color: var(--ink); }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(1120px, calc(100% - 28px)); }
+      .intro { grid-template-columns: 1fr; gap: 22px; }
+      article { grid-template-columns: 1fr; gap: 4px; padding: 32px 0; }
+      .idx { padding-top: 0; }
+      h1 { margin-top: 16px; font-size: 3.15rem; }
+      h1 span { display: block; }
+      .proof { gap: 12px 12px; }
+      nav.jump { overflow-x: visible; }
+      nav.jump ul { width: auto; min-width: 0; flex-wrap: wrap; row-gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="mast">
+      <div class="mast-top">
+        <span>Selected work</span>
+        <a href="https://github.com/yoyoyohan">GitHub</a>
+      </div>
+      <h1><span>Yohan</span> <span>Deshpande</span></h1>
+      <div class="rule"></div>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="lede">Data science work where the number has to hold up: a leaderboard, a statistical test, or a person who will use it.</p>
+        <p class="note">Six projects across language-model evaluation, document recognition, sports ratings, and asset pricing. The repositories are the work. This page is the short version.</p>
+      </div>
+      <div class="proof" aria-label="Selected results">
+        <div>
+          <strong>1st</strong>
+          <span>Research paper</span>
+        </div>
+        <div>
+          <strong>14th</strong>
+          <span>Of 110+ teams</span>
+        </div>
+        <div>
+          <strong>30th</strong>
+          <span>Kaggle · 199+</span>
+        </div>
+        <div>
+          <strong>Live</strong>
+          <span>NJ HS ratings</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <nav class="jump" aria-label="Projects">
+    <div class="wrap">
+      <ul>
+        <li><a href="#calibration">01 Calibration</a></li>
+        <li><a href="#handwriting">02 Handwriting</a></li>
+        <li><a href="#ratings">03 Ratings</a></li>
+        <li><a href="#studio">04 Studio</a></li>
+        <li><a href="#football">05 Football</a></li>
+        <li><a href="#alpha">06 Alpha</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <article id="calibration">
+      <div class="idx">01</div>
+      <div>
+        <p class="kicker">NSRI Summer Research Hackathon 2026 · with Akul Bajpai</p>
+        <h2>LLM calibration audit</h2>
+        <p class="claim">Do large language models get more overconfident as the question gets harder?</p>
+        <p class="body">We locked a protocol before looking at scores: 540 MMLU questions across three subjects and three difficulty tiers, five trials each, temperature 0.3. Claude Haiku, GPT-4o-mini, and Gemini Flash-Lite had to answer and state a confidence from 0 to 100. All 8,100 responses parsed.</p>
+        <p class="body">Claude was close to calibrated and slightly underconfident (accuracy 0.895, ECE 0.033). GPT-4o-mini and Gemini were overconfident, and the gap grew from easy items to hard ones. For GPT-4o-mini that gap moved from 0.028 to 0.354. Verbal confidence is a weak reliability signal on the hard questions.</p>
+        <ul class="facts">
+          <li>1st · research paper</li>
+          <li>14th overall · 110+ teams</li>
+          <li>Team The Mentalists</li>
+          <li>ECE 0.033 · Claude</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/llm-calibration-audit">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="handwriting">
+      <div class="idx">02</div>
+      <div>
+        <p class="kicker">Kaggle · Handwritten to Data</p>
+        <h2>Ukrainian documents into text</h2>
+        <p class="claim">A layout detector and a specialist recognizer for mixed handwritten pages. Finished 30th of 199+, score 0.83157.</p>
+        <p class="body">Half the competition score is page-level character error, so transcription quality dominates. The pipeline finds regions with YOLOv8x, then routes them: fine-tuned TrOCR for handwriting and annotations, Tesseract for print, pix2tex for formulas, and a table model for cells. A zero-shot vision-language baseline landed near 0.64. The specialized route is what moved the score.</p>
+        <ul class="facts">
+          <li>30th · 0.83157</li>
+          <li>YOLOv8x + TrOCR</li>
+          <li>7 region types</li>
+          <li>17 submissions</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/handwritten-to-data">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="ratings">
+      <div class="idx">03</div>
+      <div>
+        <p class="kicker">Shipped product · FastAPI, Supabase, Render</p>
+        <h2>NJ high school ratings</h2>
+        <p class="claim">Rankings, results, and rating history for New Jersey high school sports, refreshed from the spreadsheets coaches already keep.</p>
+        <p class="body">The shared Drive folder stays the source of truth. The app only downloads copies, rebuilds the ratings, and serves them from Postgres — about 600,000 games. GitHub Actions refreshes the database four times a day. A coach opens one URL. The first load on the free host can take a moment while the service wakes.</p>
+        <ul class="facts">
+          <li>Live site</li>
+          <li>~600,000 games</li>
+          <li>Read-only Drive sync</li>
+          <li>4× daily refresh</li>
+        </ul>
+        <div class="links">
+          <a class="live" href="https://sportsbusinessrankings.onrender.com">Open the site</a>
+          <a href="https://github.com/yoyoyohan/sportsbusinessrankings">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="studio">
+      <div class="idx">04</div>
+      <div>
+        <p class="kicker">React · TypeScript · the publishing desk for the ratings</p>
+        <h2>Ranking Studio</h2>
+        <p class="claim">Paste a rankings table. Match each school to its crest. Export a poster.</p>
+        <p class="body">Ranking Studio is the graphics tool beside the ratings site. School names are matched against a New Jersey high school logo library. Type, color, and spacing live as design tokens, so a poster can be restyled without rewriting the layout. The export is a PNG.</p>
+        <ul class="facts">
+          <li>Table in, poster out</li>
+          <li>NJ school crests</li>
+          <li>Token-based layout</li>
+          <li>PNG export</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/designtool">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="football">
+      <div class="idx">05</div>
+      <div>
+        <p class="kicker">Computer vision · YOLOv8 + ByteTrack</p>
+        <h2>Football clip stats</h2>
+        <p class="claim">A short broadcast clip becomes possession, passes, shots, shots on target, and goals.</p>
+        <p class="body">The detector tracks players, the ball, and the posts. Jersey colors split the teams. A pitch homography turns pixels into meters on a 105 by 68 field, and the stat engine reads events off that geometry. It is built for clips of ten to thirty seconds. Ball detection, similar kits, and shots with no goal in frame are the limits, and they are written down in the repo.</p>
+        <ul class="facts">
+          <li>Possession · passes · shots</li>
+          <li>Pitch in meters</li>
+          <li>Interactive calibration</li>
+          <li>Short clips</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/football-clip-stats">Repository</a>
+        </div>
+      </div>
+    </article>
+
+    <article id="alpha">
+      <div class="idx">06</div>
+      <div>
+        <p class="kicker">Empirical asset pricing · 2018 to mid-2026</p>
+        <h2>Is it alpha or just exposure?</h2>
+        <p class="claim">When a stock beats the market, how much is unexplained leftover, and how much is size, value, and momentum?</p>
+        <p class="body">Daily excess returns are fit with three nested models — CAPM, Fama–French three-factor, and Carhart four-factor — using Ken French’s factors and Newey–West standard errors. Apple’s annualized leftover is about 10.5% and barely shrinks as factors are added. The interval includes zero (t = 1.53). SPY, the check, has a market beta near 1, alpha on zero, and an R² of 0.99. A point estimate that fails the test is the result.</p>
+        <ul class="facts">
+          <li>AAPL α ≈ 10.5% · p = 0.13</li>
+          <li>SPY R² = 0.99</li>
+          <li>Newey–West errors</li>
+          <li>Nested factor models</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/alpha-or-exposure">Repository</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <span>Yohan Deshpande</span>
+    <a href="https://github.com/yoyoyohan">github.com/yoyoyohan</a>
+  </footer>
+</body>
+</html>
