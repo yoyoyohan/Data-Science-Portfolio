@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yohan Deshpande — Selected work</title>
-  <meta name="description" content="Yohan Deshpande. LLM calibration research (1st, paper; 14th overall), a 30th-place Kaggle document pipeline, and a live New Jersey high school ratings site." />
+  <title>Yohan Deshpande — Data science</title>
+  <meta name="description" content="Yohan Deshpande, a data science student. Projects in model evaluation, statistical modeling, computer vision, and sports analytics." />
   <link rel="canonical" href="https://yoyoyohan.github.io/Data-Science-Portfolio/" />
-  <meta property="og:title" content="Yohan Deshpande — Selected work" />
-  <meta property="og:description" content="1st in the research paper. 14th overall. A Kaggle document pipeline at 30th, and a live New Jersey high school ratings site." />
+  <meta property="og:title" content="Yohan Deshpande — Data science" />
+  <meta property="og:description" content="A data science student working in model evaluation, statistical modeling, computer vision, and sports analytics." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yoyoyohan.github.io/Data-Science-Portfolio/" />
   <meta property="og:image" content="https://yoyoyohan.github.io/Data-Science-Portfolio/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Yohan Deshpande — Selected work" />
-  <meta name="twitter:description" content="1st in the research paper. 14th overall. A Kaggle document pipeline at 30th, and a live New Jersey high school ratings site." />
+  <meta name="twitter:title" content="Yohan Deshpande — Data science" />
+  <meta name="twitter:description" content="A data science student working in model evaluation, statistical modeling, computer vision, and sports analytics." />
   <meta name="twitter:image" content="https://yoyoyohan.github.io/Data-Science-Portfolio/og.png" />
   <meta name="theme-color" content="#f3efe6" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -89,10 +89,14 @@
     }
 
     .intro {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 40px;
-      padding: 32px 0 8px;
+      padding: 28px 0 8px;
+    }
+    .role {
+      font-family: "Fraunces", Georgia, serif;
+      font-style: italic;
+      font-weight: 560;
+      font-size: 1.35rem;
+      margin: 0 0 18px;
     }
     .lede {
       font-family: "Fraunces", Georgia, serif;
@@ -101,37 +105,40 @@
       line-height: 1.25;
       letter-spacing: -0.02em;
       margin: 0;
+      max-width: 44rem;
     }
     .intro p.note {
       margin: 14px 0 0;
       color: var(--muted);
       max-width: 42rem;
     }
-    .proof {
+    .fields {
+      list-style: none;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px 18px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin: 26px 0 0;
+      padding: 0;
+    }
+    .fields li {
       margin: 0;
-      align-content: start;
+      border-top: 1px solid var(--ink);
+      padding-top: 10px;
     }
-    .proof div { border-top: 1px solid var(--line); padding-top: 8px; }
-    .proof strong {
+    .fields strong {
       display: block;
-      font-family: "Fraunces", Georgia, serif;
-      font-weight: 620;
-      font-size: 1.7rem;
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-    .proof span {
-      display: block;
-      margin-top: 4px;
       font-family: "IBM Plex Mono", ui-monospace, monospace;
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      line-height: 1.35;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
+    }
+    .fields span {
+      display: block;
+      margin-top: 6px;
       color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     nav.jump {
@@ -252,12 +259,11 @@
 
     @media (max-width: 760px) {
       .wrap { width: min(1120px, calc(100% - 28px)); }
-      .intro { grid-template-columns: 1fr; gap: 22px; }
       article { grid-template-columns: 1fr; gap: 4px; padding: 32px 0; }
       .idx { padding-top: 0; }
       h1 { margin-top: 16px; font-size: 3.15rem; }
       h1 span { display: block; }
-      .proof { gap: 12px 12px; }
+      .fields { grid-template-columns: 1fr 1fr; gap: 16px; }
       nav.jump { overflow-x: visible; }
       nav.jump ul { width: auto; min-width: 0; flex-wrap: wrap; row-gap: 8px; }
     }
@@ -267,7 +273,7 @@
   <div class="wrap">
     <header class="mast">
       <div class="mast-top">
-        <span>Selected work</span>
+        <span>Data science</span>
         <a href="https://github.com/yoyoyohan">GitHub</a>
       </div>
       <h1><span>Yohan</span> <span>Deshpande</span></h1>
@@ -275,40 +281,39 @@
     </header>
 
     <section class="intro">
-      <div>
-        <p class="lede">Data science work where the number has to hold up: a leaderboard, a statistical test, or a person who will use it.</p>
-        <p class="note">Six projects across language-model evaluation, document recognition, sports ratings, and asset pricing. The repositories are the work. This page is the short version.</p>
-      </div>
-      <div class="proof" aria-label="Selected results">
-        <div>
-          <strong>1st</strong>
-          <span>Research paper</span>
-        </div>
-        <div>
-          <strong>14th</strong>
-          <span>Of 110+ teams</span>
-        </div>
-        <div>
-          <strong>30th</strong>
-          <span>Kaggle · 199+</span>
-        </div>
-        <div>
-          <strong>Live</strong>
-          <span>NJ HS ratings</span>
-        </div>
-      </div>
+      <p class="role">Data science student</p>
+      <p class="lede">I work in applied statistics, machine learning, and sports analytics. The habit underneath the projects is the same: start from a raw source, build a measurement, and check whether that measurement means what it claims.</p>
+      <p class="note">Six repositories, four kinds of work.</p>
+      <ul class="fields">
+        <li>
+          <strong>Model evaluation</strong>
+          <span>Whether a language model’s stated confidence matches its accuracy.</span>
+        </li>
+        <li>
+          <strong>Statistical modeling</strong>
+          <span>How much of a return is factor exposure, and what is left over.</span>
+        </li>
+        <li>
+          <strong>Computer vision</strong>
+          <span>Handwritten pages and broadcast clips turned into structured data.</span>
+        </li>
+        <li>
+          <strong>Sports analytics</strong>
+          <span>Ratings from the spreadsheets coaches already keep, and the graphics that publish them.</span>
+        </li>
+      </ul>
     </section>
   </div>
 
   <nav class="jump" aria-label="Projects">
     <div class="wrap">
       <ul>
-        <li><a href="#calibration">01 Calibration</a></li>
-        <li><a href="#handwriting">02 Handwriting</a></li>
-        <li><a href="#ratings">03 Ratings</a></li>
-        <li><a href="#studio">04 Studio</a></li>
-        <li><a href="#football">05 Football</a></li>
-        <li><a href="#alpha">06 Alpha</a></li>
+        <li><a href="#calibration">01 Evaluation</a></li>
+        <li><a href="#alpha">02 Factors</a></li>
+        <li><a href="#handwriting">03 Documents</a></li>
+        <li><a href="#football">04 Football</a></li>
+        <li><a href="#ratings">05 Ratings</a></li>
+        <li><a href="#studio">06 Studio</a></li>
       </ul>
     </div>
   </nav>
@@ -317,54 +322,87 @@
     <article id="calibration">
       <div class="idx">01</div>
       <div>
-        <p class="kicker">NSRI Summer Research Hackathon 2026 · with Akul Bajpai</p>
+        <p class="kicker">Model evaluation</p>
         <h2>LLM calibration audit</h2>
-        <p class="claim">Do large language models get more overconfident as the question gets harder?</p>
-        <p class="body">We locked a protocol before looking at scores: 540 MMLU questions across three subjects and three difficulty tiers, five trials each, temperature 0.3. Claude Haiku, GPT-4o-mini, and Gemini Flash-Lite had to answer and state a confidence from 0 to 100. All 8,100 responses parsed.</p>
-        <p class="body">Claude was close to calibrated and slightly underconfident (accuracy 0.895, ECE 0.033). GPT-4o-mini and Gemini were overconfident, and the gap grew from easy items to hard ones. For GPT-4o-mini that gap moved from 0.028 to 0.354. Verbal confidence is a weak reliability signal on the hard questions.</p>
+        <p class="claim">A study of whether a language model’s stated confidence stays in line with its accuracy as questions get harder.</p>
+        <p class="body">With Akul Bajpai, I locked the protocol before looking at scores. Five hundred forty MMLU questions, difficulty tiers fixed in advance, five trials each, three models: Claude Haiku, GPT-4o-mini, and Gemini Flash-Lite. Every answer had to come with a confidence from 0 to 100. The analysis asks a standard evaluation question — does verbal confidence track correctness, and does the gap widen on hard items? Claude stayed close to calibrated. The other two grew more overconfident as difficulty rose. We wrote it up as a research paper for the NSRI Summer Research Hackathon 2026, where it placed first in the research category and the team placed 14th overall.</p>
         <ul class="facts">
-          <li>1st · research paper</li>
-          <li>14th overall · 110+ teams</li>
-          <li>Team The Mentalists</li>
-          <li>ECE 0.033 · Claude</li>
+          <li>Verbal confidence</li>
+          <li>Difficulty tiers</li>
+          <li>540 MMLU items</li>
+          <li>Three API models</li>
         </ul>
         <div class="links">
           <a href="https://github.com/yoyoyohan/llm-calibration-audit">Repository</a>
         </div>
       </div>
     </article>
-
-    <article id="handwriting">
+<article id="alpha">
       <div class="idx">02</div>
       <div>
-        <p class="kicker">Kaggle · Handwritten to Data</p>
-        <h2>Ukrainian documents into text</h2>
-        <p class="claim">A layout detector and a specialist recognizer for mixed handwritten pages. Finished 30th of 199+, score 0.83157.</p>
-        <p class="body">Half the competition score is page-level character error, so transcription quality dominates. The pipeline finds regions with YOLOv8x, then routes them: fine-tuned TrOCR for handwriting and annotations, Tesseract for print, pix2tex for formulas, and a table model for cells. A zero-shot vision-language baseline landed near 0.64. The specialized route is what moved the score.</p>
+        <p class="kicker">Statistical modeling</p>
+        <h2>Is it alpha or just exposure?</h2>
+        <p class="claim">An asset-pricing project that separates a stock’s leftover return from its exposure to the market, size, value, and momentum.</p>
+        <p class="body">Daily excess returns are fit with three nested models — CAPM, the Fama–French three-factor model, and Carhart’s four-factor model — using Ken French’s factor files. Standard errors are Newey–West, because daily residuals are not independent. Nesting the models is the point: if the intercept shrinks once size, value, and momentum enter, the apparent edge was exposure. On 2018 through mid-2026, Apple’s annualized leftover is about 10.5% and the interval includes zero. SPY, the check, has a market beta near 1 and an R² of 0.99.</p>
         <ul class="facts">
-          <li>30th · 0.83157</li>
+          <li>CAPM · FF3 · Carhart</li>
+          <li>Newey–West errors</li>
+          <li>Ken French factors</li>
+          <li>Daily excess returns</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/alpha-or-exposure">Repository</a>
+        </div>
+      </div>
+    </article>
+<article id="handwriting">
+      <div class="idx">03</div>
+      <div>
+        <p class="kicker">Computer vision</p>
+        <h2>Handwritten to Data</h2>
+        <p class="claim">A document pipeline that finds the regions on a mixed handwritten page and transcribes each one with a model suited to that region.</p>
+        <p class="body">Built for Ukrainian pages in a Kaggle competition. YOLOv8x detects seven kinds of region. Handwriting and annotations go to a fine-tuned TrOCR, printed text to Tesseract, formulas to pix2tex, and tables to a table model. Page-level character error is half the scoring rule, so the recognizer carries more weight than the detector. A general vision-language model was a useful baseline. The specialized route is the system I submitted, scoring 0.83157 and finishing 30th of 199+.</p>
+        <ul class="facts">
+          <li>Layout detection</li>
           <li>YOLOv8x + TrOCR</li>
-          <li>7 region types</li>
-          <li>17 submissions</li>
+          <li>Seven region types</li>
+          <li>Handwriting and print</li>
         </ul>
         <div class="links">
           <a href="https://github.com/yoyoyohan/handwritten-to-data">Repository</a>
         </div>
       </div>
     </article>
-
-    <article id="ratings">
-      <div class="idx">03</div>
+<article id="football">
+      <div class="idx">04</div>
       <div>
-        <p class="kicker">Shipped product · FastAPI, Supabase, Render</p>
-        <h2>NJ high school ratings</h2>
-        <p class="claim">Rankings, results, and rating history for New Jersey high school sports, refreshed from the spreadsheets coaches already keep.</p>
-        <p class="body">The shared Drive folder stays the source of truth. The app only downloads copies, rebuilds the ratings, and serves them from Postgres — about 600,000 games. GitHub Actions refreshes the database four times a day. A coach opens one URL. The first load on the free host can take a moment while the service wakes.</p>
+        <p class="kicker">Computer vision</p>
+        <h2>Football clip stats</h2>
+        <p class="claim">A tracking pipeline that turns a short broadcast clip into possession, passes, shots, shots on target, and goals.</p>
+        <p class="body">YOLOv8 and ByteTrack follow the players, the ball, and the posts. Jersey colors assign the two teams. A homography maps the frame onto a 105 by 68 meter pitch, and the stat engine reads events off that geometry rather than off the raw pixels. It is written for clips of about ten to thirty seconds. Ball detection, similar kits, and shots with no goal in frame are the limits, and they are documented in the repository.</p>
         <ul class="facts">
-          <li>Live site</li>
-          <li>~600,000 games</li>
-          <li>Read-only Drive sync</li>
-          <li>4× daily refresh</li>
+          <li>Detection and tracking</li>
+          <li>Pitch homography</li>
+          <li>Event geometry</li>
+          <li>Short broadcast clips</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/yoyoyohan/football-clip-stats">Repository</a>
+        </div>
+      </div>
+    </article>
+<article id="ratings">
+      <div class="idx">05</div>
+      <div>
+        <p class="kicker">Sports analytics</p>
+        <h2>NJ high school ratings</h2>
+        <p class="claim">A ratings site for New Jersey high school sports, built on the spreadsheets coaches already maintain.</p>
+        <p class="body">The shared Drive folder stays the source of truth, and the app only reads it. Copies are imported, rankings and rating history are rebuilt, and about 600,000 games are served from Postgres. GitHub Actions refreshes the database four times a day. The site is a small FastAPI app on Render, with Supabase holding the database, so a coach can open one URL instead of a workbook.</p>
+        <ul class="facts">
+          <li>Rankings and results</li>
+          <li>Read-only spreadsheet sync</li>
+          <li>About 600,000 games</li>
+          <li>Scheduled refresh</li>
         </ul>
         <div class="links">
           <a class="live" href="https://sportsbusinessrankings.onrender.com">Open the site</a>
@@ -372,60 +410,21 @@
         </div>
       </div>
     </article>
-
-    <article id="studio">
-      <div class="idx">04</div>
+<article id="studio">
+      <div class="idx">06</div>
       <div>
-        <p class="kicker">React · TypeScript · the publishing desk for the ratings</p>
+        <p class="kicker">Sports analytics</p>
         <h2>Ranking Studio</h2>
-        <p class="claim">Paste a rankings table. Match each school to its crest. Export a poster.</p>
-        <p class="body">Ranking Studio is the graphics tool beside the ratings site. School names are matched against a New Jersey high school logo library. Type, color, and spacing live as design tokens, so a poster can be restyled without rewriting the layout. The export is a PNG.</p>
+        <p class="claim">The publishing desk beside the ratings: a table of schools goes in, a poster comes out.</p>
+        <p class="body">Names are matched against a library of New Jersey high school crests, so a ranking does not have to be laid out by hand. Type, color, and spacing live as design tokens, which means the poster can be restyled without rewriting the template. The export is a PNG. Built in React and TypeScript as the graphics half of the same sports project.</p>
         <ul class="facts">
-          <li>Table in, poster out</li>
-          <li>NJ school crests</li>
-          <li>Token-based layout</li>
+          <li>Table to poster</li>
+          <li>School crest matching</li>
+          <li>Design tokens</li>
           <li>PNG export</li>
         </ul>
         <div class="links">
           <a href="https://github.com/yoyoyohan/designtool">Repository</a>
-        </div>
-      </div>
-    </article>
-
-    <article id="football">
-      <div class="idx">05</div>
-      <div>
-        <p class="kicker">Computer vision · YOLOv8 + ByteTrack</p>
-        <h2>Football clip stats</h2>
-        <p class="claim">A short broadcast clip becomes possession, passes, shots, shots on target, and goals.</p>
-        <p class="body">The detector tracks players, the ball, and the posts. Jersey colors split the teams. A pitch homography turns pixels into meters on a 105 by 68 field, and the stat engine reads events off that geometry. It is built for clips of ten to thirty seconds. Ball detection, similar kits, and shots with no goal in frame are the limits, and they are written down in the repo.</p>
-        <ul class="facts">
-          <li>Possession · passes · shots</li>
-          <li>Pitch in meters</li>
-          <li>Interactive calibration</li>
-          <li>Short clips</li>
-        </ul>
-        <div class="links">
-          <a href="https://github.com/yoyoyohan/football-clip-stats">Repository</a>
-        </div>
-      </div>
-    </article>
-
-    <article id="alpha">
-      <div class="idx">06</div>
-      <div>
-        <p class="kicker">Empirical asset pricing · 2018 to mid-2026</p>
-        <h2>Is it alpha or just exposure?</h2>
-        <p class="claim">When a stock beats the market, how much is unexplained leftover, and how much is size, value, and momentum?</p>
-        <p class="body">Daily excess returns are fit with three nested models — CAPM, Fama–French three-factor, and Carhart four-factor — using Ken French’s factors and Newey–West standard errors. Apple’s annualized leftover is about 10.5% and barely shrinks as factors are added. The interval includes zero (t = 1.53). SPY, the check, has a market beta near 1, alpha on zero, and an R² of 0.99. A point estimate that fails the test is the result.</p>
-        <ul class="facts">
-          <li>AAPL α ≈ 10.5% · p = 0.13</li>
-          <li>SPY R² = 0.99</li>
-          <li>Newey–West errors</li>
-          <li>Nested factor models</li>
-        </ul>
-        <div class="links">
-          <a href="https://github.com/yoyoyohan/alpha-or-exposure">Repository</a>
         </div>
       </div>
     </article>
